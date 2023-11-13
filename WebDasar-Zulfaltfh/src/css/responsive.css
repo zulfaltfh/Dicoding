@@ -1,0 +1,226 @@
+:root {
+  --primary-color01: #212f41;
+  --primary-color02: #2c3e56;
+  --primary-color03: #374e6c;
+  --primary-color04: #738398;
+  --primary-color05: #9ba7b6;
+  --secondary-color01: #995618;
+  --secondary-color02: #cc7220;
+  --secondary-color03: #ff8f28;
+  --secondary-color04: #ffa553;
+  --secondary-color05: #ffe9d4;
+  --base-color01: #333333;
+  --base-color02: #828282;
+  --base-color03: #bdbdbd;
+  --base-color04: #f2f2f2;
+  --base-color05: #ffffff;
+}
+
+/* Laptop */
+@media (max-width: 1024px){
+
+  .hero-content .hero-heading h1{
+    font-size: 46px;
+  }
+
+  .hero-content .hero-heading > p.sub-heading{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .hero-content .hero-image > img{
+    width: 510px;
+  }
+
+  .hero-heading > p.sub-heading{
+    margin-bottom: 16px;
+  }
+
+  .service-content .list{
+    height: 90px;
+  }
+
+  .service-content .service-list, .service-content .facility-list{
+    flex: 1 1;
+    height: max-content;
+  }
+
+  .facility-list .facilties{
+    flex-direction: column;
+  }
+
+  .service-content img{
+    max-width: 40px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 968px) {
+
+  main{
+    padding-top: 10%;
+  }
+  .header{
+    padding: 10px;
+  }
+
+  .header .nav-menu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background-color: var(--base-color05);
+    box-shadow: -20px 0px 60px rgba(0,0,0,0.1);
+    padding: 15px 24px 24px;
+    overflow-y: auto;
+    z-index: 1;
+    transform: translateX(100%);
+  }
+
+  .header .nav-menu.open{
+    transform: none;
+  }
+
+  .header .nav-menu .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .header .nav-menu .head .logo > img{
+    display: none;
+  }
+
+  .header .nav-menu .head .close-btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .header .nav-menu .head .close-btn > i{
+    position: relative;
+    font-size: 34px;
+  }
+
+  .header .nav-menu > ul > li{
+    display: block;
+    margin: 12px 0px;
+  }
+
+  .header .nav-menu > ul > li:not(:last-child){
+    margin-right: 0px;
+  }
+
+  .header .nav-menu li{
+    border-bottom: 1px solid #2c3e568b;
+  }
+
+  .header .nav-menu > ul > .dropdown > i{
+    height: 32px;
+    width: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    top: 12px;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  .header .nav-menu > ul > li > a{
+    padding: 18px 0px;
+  }
+
+  .header .nav-menu > ul > .dropdown > a{
+    padding-right: 34px;
+  }
+
+  .header .nav-menu > ul > .dropdown.active > i{
+    transform: rotate(180deg);
+  }
+
+  .header .nav-menu .sub-menu{
+    position: static;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    padding: 0;
+    transition: none;
+    width: 100%;
+    box-shadow: none;
+    display: none;
+  }
+
+  .header .nav-menu > ul > .dropdown.active > .sub-menu{
+    display: block;
+  }
+  .header .nav-menu .sub-menu li:first-child{
+    border-top: 1px solid #2c3e568b;
+  }
+
+  .header .nav-menu .sub-menu li:last-child{
+    border-bottom: none;
+  }
+
+  .header .nav-menu .sub-menu a{
+    padding: 12px 0 12px 16px;
+  }
+
+  .open-btn{
+    display: block;
+  }
+
+  .hero-content{
+    flex-direction: column-reverse;
+  }
+
+  .hero-content .hero-image > img{
+    width: 100%;
+  }
+
+  
+  .motto-content{
+    display: block;
+  }
+
+  .motto-content .motto{
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .service-content{
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+}
+
+/* Mobile  & Tablet */
+@media (max-width: 600px) and (min-width: 300px){
+
+  .header .nav-menu{
+    width: 100%;
+    transform: translateX(100%);
+  }
+
+  .header .nav-menu .head .logo > img{
+    display: block;
+  }
+
+  .hero-content .hero-heading h1{
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  .btn{
+    font-size: 14px;
+  }
+
+  .service-content .list{
+    height: 100%;
+  }
+
+  .service-content .title{
+    font-size: 32px;
+  }
+  
+}
